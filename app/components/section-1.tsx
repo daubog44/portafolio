@@ -1,9 +1,10 @@
+"use client";
+import "client-only";
 import ScrollIndicator from "./scrollIndicator";
 import { motion } from "framer-motion";
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { useScrollDirection } from "hooks/useScrollDetection";
-import { useIsScrolledDown } from "hooks/useIsScrolled";
+import { useIsScrolledDown } from "app/hooks/useIsScrolled";
 
 const Section1: FC<{ onAnimationEnd: () => void }> = ({ onAnimationEnd }) => {
   const [isScrollIndicatorShowing, setIsScrollIndicatorShowing] =
@@ -28,7 +29,7 @@ const Section1: FC<{ onAnimationEnd: () => void }> = ({ onAnimationEnd }) => {
         }}
       >
         <div className="h-full flex justify-center items-center flex-col">
-          <div className="flex justify-center items-center relative -top-24 font-bold text-3xl text-rose-300 text-center flex-col font-gloria">
+          <div className="flex justify-center items-center relative -top-24 text-4xl text-rose-300 text-center flex-col">
             <div className="rounded-full box-shadow-light-inset h-44 w-44"></div>
             <div className="block relative -top-28">
               <Typewriter

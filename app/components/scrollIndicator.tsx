@@ -1,5 +1,7 @@
+"use client";
+import "client-only";
 import { motion } from "framer-motion";
-import React, { FC, useEffect } from "react";
+import { FC } from "react";
 
 const ScrollIndicator: FC<{ active?: boolean }> = ({ active = true }) => {
   const variants = {

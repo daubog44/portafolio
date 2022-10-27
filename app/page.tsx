@@ -1,19 +1,18 @@
-import Section1 from "@/components/section-1";
-import Section2 from "@/components/section-2";
-import Cursor from "@/components/customCursor";
-import { motion } from "framer-motion";
-import type { NextPage } from "next";
+"use client";
+import "client-only";
+import Section1 from "app/components/section-1";
+import Section2 from "app/components/section-2";
+import Cursor from "app/components/customCursor";
 import { useState } from "react";
-import { Typewriter } from "react-simple-typewriter";
 
-const Home: NextPage = () => {
+const Home = () => {
   const [animateComplete, setAnimateComplete] = useState(false);
   const [cursorType, setCursorType] = useState<"primary" | "secondary">(
     "primary"
   );
 
   return (
-    <>
+    <div className="App">
       <Cursor color={cursorType} />
       <Section1
         onAnimationEnd={() => {
@@ -32,7 +31,7 @@ const Home: NextPage = () => {
           }}
         />
       ) : null}
-    </>
+    </div>
   );
 };
 
