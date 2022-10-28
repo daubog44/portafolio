@@ -1,15 +1,15 @@
 "use client";
-import { FC, useState } from "react";
+import { FC } from "react";
 import Link from "next/link";
 import type { IconType } from "react-icons";
+import { motion } from "framer-motion";
 
 export interface CardProp {
   background: string;
   Technology: IconType;
   description: string;
-  link?: string;
-  linkString?: string;
-  haveLink?: boolean;
+  link: string;
+  linkString: string;
 }
 
 const Card: FC<CardProp> = function ({
@@ -18,39 +18,34 @@ const Card: FC<CardProp> = function ({
   link,
   linkString,
   description,
-  haveLink = true,
 }) {
-  const [isHover, setIsShown] = useState(false);
-
+  if (typeof link !== "string") return <h1>error</h1>;
   return (
-    <div
-      className="perspective-1500px h-40 w-40 relative group"
-      onMouseEnter={() => setIsShown(true)}
-      onMouseLeave={() => setIsShown(false)}
+    <motion.div
+      viewport={{ once: true }}
+      initial={{ transform: "translateY(150px)" }}
+      whileInView={{ transform: "translateY(0px)" }}
     >
-      <div
-        className={`bg-gradient-to-r ${background} ease-in transition duration-800 z-30 absolute top-0 left-0 w-full h-full overflow-hidden shadow-lg pointer-events-none lg:group-hover:rotate-y-back rounded-md p-2 flex justify-center items-center backfaceVisibilityhidden-hidden`}
+      <Link
+        target="_blank"
+        href={link as unknown as string}
+        className="lg:max-h-[194px] box-border flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
-        <Technology className="w-2/4 h-2/4" />
-      </div>
-      <div
-        className={`bg-gradient-to-r ${background} ease-in transition duration-80 z-20 absolute top-0 left-0 w-full h-full overflow-hidden shadow-lg pointer-events-none lg:group-hover:rotate-y-0 rotate-y rounded-md p-2 text-center text-neutral-900`}
-      >
-        {haveLink && isHover ? (
-          <div className="pointer-events-auto text-lg border-b-2 border-zinc-500 w-full h-8 font-bold border-b-rounded font-sans">
-            <Link
-              replace
-              href={link as string}
-              className="font-crimson text-xl"
-              target="_blank"
-            >
-              {linkString}
-            </Link>
-          </div>
-        ) : null}
-        {description}
-      </div>
-    </div>
+        <div
+          className={`md:h-[290px] lg:h-auto box-border bg-gradient-to-r ${background} w-full md:w-auto rounded-t-lg md:rounded-none md:rounded-l-lg overflow-hidden flex justify-center items-center p-4`}
+        >
+          <Technology className="h-40 w-40 inline-block" />
+        </div>
+        <div className="flex flex-col justify-between p-4 leading-normal w-3/4">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {linkString}
+          </h5>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {description}
+          </p>
+        </div>
+      </Link>
+    </motion.div>
   );
 };
 export default Card;

@@ -33,6 +33,7 @@ const Section1: FC<{ onAnimationEnd: () => void }> = ({ onAnimationEnd }) => {
             <div className="rounded-full box-shadow-light-inset h-44 w-44"></div>
             <div className="block relative -top-28">
               <Typewriter
+                loop={false}
                 cursor={true}
                 onLoopDone={() =>
                   !isScrolledDown && setIsScrollIndicatorShowing(true)

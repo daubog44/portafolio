@@ -37,6 +37,15 @@ const backfaceVisibility = plugin(function ({ addUtilities }) {
   });
 });
 
+const textShadow = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".text-shadow": {
+      textShadow:
+        "0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, 0px 0px 20px #b393d3",
+    },
+  });
+});
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -46,6 +55,7 @@ module.exports = {
   theme: {
     fontFamily: {
       crimson: "Crimson Pro",
+      Imbue: "Imbue",
     },
     extend: {
       backgroundImage: {
@@ -56,5 +66,5 @@ module.exports = {
       },
     },
   },
-  plugins: [rotateY, perspective, backfaceVisibility],
+  plugins: [rotateY, perspective, backfaceVisibility, textShadow],
 };
