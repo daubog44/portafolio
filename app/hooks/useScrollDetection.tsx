@@ -5,7 +5,7 @@ export enum ScrollDirection {
   down = "down",
 }
 
-export const useScrollDirection = () => {
+export const useScrollDirection = function () {
   const threshold = 100;
   const [scrollDir, setScrollDir] = useState(ScrollDirection.up);
 

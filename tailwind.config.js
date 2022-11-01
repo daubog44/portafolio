@@ -58,11 +58,26 @@ module.exports = {
       Imbue: "Imbue",
     },
     extend: {
+      animation: {
+        bouncing: "rubberband 800ms alternate ease-out 250ms",
+      },
+      keyframes: {
+        rubberband: {
+          "0%": { transform: "scaleX(1)" },
+          "40%": { transform: "scaleX(1.12) scaleY(0.75)" },
+          "55%": { transform: "scaleX(0.85) scaleY(1)" },
+          "65%": { transform: "scaleX(1.09) scaleY(0.85)" },
+          "75%": { transform: "scaleX(0.9) scaleY(1)" },
+          "90%": { transform: "scaleX(1.05) scaleY(0.95)" },
+          "100%": { transform: "scaleX(1) scaleY(1)" },
+        },
+      },
       backgroundImage: {
         "first-section-bg": "url('/layered-waves-haikei.svg')",
         "first-section-bg-md": "url('/layered-waves-haikei-md.svg')",
         "first-section-bg-lg": "url('/layered-waves-haikei-lg.svg')",
         "first-section-bg-2-lg": "url('/layered-waves-haikei-2-lg.svg')",
+        waves: "url('/waves.svg')",
       },
     },
   },
