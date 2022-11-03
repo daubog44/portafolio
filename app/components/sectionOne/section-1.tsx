@@ -1,13 +1,14 @@
 "use client";
 import ScrollIndicator from "./scrollIndicator";
 import { motion } from "framer-motion";
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, memo, useCallback, useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { useIsScrolledDown } from "app/hooks/useIsScrolled";
 import "../../customCss/section-1-waves.css";
 import WaveSVG from "../svg/WaveSVG";
 import HomeSVG from "../svg/HomeSVG";
 import { useMediaQuery } from "usehooks-ts";
+import FireFliesEffect from "../fireflies";
 
 const Section1: FC<{ onAnimationEnd: () => void }> = function ({
   onAnimationEnd,
@@ -25,18 +26,19 @@ const Section1: FC<{ onAnimationEnd: () => void }> = function ({
   }, [isScrolledDown]);
 
   const onLoopDone = useCallback(() => {
-    if (clearTimeout) {
+    if (clearTimeout || isScrolledDown) {
       return;
     }
     window.setTimeout(() => {
       setIsScrollIndicatorShowing(true);
       setClearTimeout(true);
     }, 4000);
-  }, [clearTimeout]);
+  }, [clearTimeout, isScrolledDown]);
 
   return (
     <>
-      <section className="h-[90vh] lg:h-screen w-screen bg-[#001220] overflow-y-hidden">
+      <section className="h-[90vh] lg:h-screen w-screen bg-[#001220] overflow-y-hidden bg-cover">
+        <FireFliesEffect />
         <motion.div
           className="block bg-center h-full w-full bg-no-repeat bg-cover"
           initial={{ transform: "translateY(100%)" }}
@@ -80,4 +82,4 @@ const Section1: FC<{ onAnimationEnd: () => void }> = function ({
   );
 };
 
-export default Section1;
+export default memo(Section1);
