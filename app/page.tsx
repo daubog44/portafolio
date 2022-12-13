@@ -1,14 +1,16 @@
 "use client";
 import "client-only";
-import Section1 from "@/components/sectionOne/section-1";
-import Section2 from "@/components/sectionTwo/section-2";
-import Cursor from "app/components/customCursor";
+import Section1 from "components/sectionOne/section-1";
+import Section2 from "components/sectionTwo/section-2";
+import Section3 from "components/sectionThree/section-3";
+import Cursor from "components/customCursor";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
-import "./customCss/loading-animation.css";
+import Sound from "components/playMusic";
+import "../styles/loading-animation.css";
 
 const Home = () => {
-  const matches = useMediaQuery("(min-width: 768px)");
+  const matches = useMediaQuery("(min-width: 1200px)");
   const [animateComplete, setAnimateComplete] = useState(false);
   const [cursorType, setCursorType] = useState<"primary" | "secondary">(
     "primary"
@@ -33,26 +35,33 @@ const Home = () => {
 
   if (isClientReady)
     return (
-      <div className="App">
-        {matches && <Cursor color={cursorType} />}
-        <Section1
-          onAnimationEnd={() => {
-            setAnimateComplete(true);
-          }}
-        />
-        {animateComplete ? (
-          <Section2
-            handleHover={{
-              whileBottomDivHover: () => {
-                setCursorType("secondary");
-              },
-              whileBottomDivLeaveHover: () => {
-                setCursorType("primary");
-              },
+      <>
+        <div className="App">
+          {matches && <Cursor color={cursorType} />}
+          <Section1
+            onAnimationEnd={() => {
+              setAnimateComplete(true);
             }}
-          />
-        ) : null}
-      </div>
+          >
+            <Sound />
+          </Section1>
+          {animateComplete ? (
+            <>
+              <Section2
+                handleHover={{
+                  whileBottomDivHover: () => {
+                    setCursorType("secondary");
+                  },
+                  whileBottomDivLeaveHover: () => {
+                    setCursorType("primary");
+                  },
+                }}
+              />
+              <Section3 />
+            </>
+          ) : null}
+        </div>
+      </>
     );
 };
 

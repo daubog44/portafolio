@@ -27,6 +27,22 @@
 }
 
 @layer utilities {
+  .bg-radial-gradient {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+  }
+
+  .bg-radial-gradient-border {
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 1),
+      transparent 40%
+    );
+  }
+
   .box-shadow-light-inset {
     box-shadow: 0 0 50px #c62368, -10px 0 80px #c62368;
   }

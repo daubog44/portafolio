@@ -56,6 +56,7 @@ module.exports = {
     fontFamily: {
       crimson: "Crimson Pro",
       Imbue: "Imbue",
+      aurore: "La Belle Aurore",
     },
     extend: {
       animation: {
