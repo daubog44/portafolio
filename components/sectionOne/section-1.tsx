@@ -16,7 +16,7 @@ const Section1: FC<{ children: any; onAnimationEnd: () => void }> = function ({
 
   return (
     <>
-      <section className="h-[90vh] lg:h-screen w-screen bg-[#001220] overflow-y-hidden bg-cover">
+      <section className="h-[90vh] w-screen lg:h-screen bg-[#001220] bg-cover">
         <FireFliesEffect />
         <motion.div
           className="block bg-center h-full w-full bg-no-repeat bg-cover"

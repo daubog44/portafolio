@@ -28,7 +28,7 @@ const Section2: FC<{
   }, []);
 
   return (
-    <section className="w-screen flex flex-col justify-end items-center bg-indigo-500">
+    <section className="w-screen overflow-x-hidden flex flex-col justify-end items-center bg-indigo-500">
       <TitleAnimated title="My Little Achivments" />
 
       <div
