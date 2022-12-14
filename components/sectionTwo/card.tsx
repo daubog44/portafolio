@@ -62,7 +62,7 @@ const Card: FC<CardProp> = function ({
               className="h-40 w-40 inline-block"
             />
           </div>
-          <div className="flex flex-col justify-between px-4 leading-normal w-3/4">
+          <div className="flex flex-col justify-between px-4 leading-normal w-3/4 md:pt-0 pt-4">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {linkString}
             </h5>
