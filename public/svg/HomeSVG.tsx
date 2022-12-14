@@ -28,7 +28,6 @@ const HomeSVG = function () {
           xlinkHref="#a5312bde-8c7e-4767-9e17-08a43f21bf92-2597"
         />
       </defs>
-      <title>static_assets</title>
       <ellipse
         cx="814.66"
         cy="585.22"

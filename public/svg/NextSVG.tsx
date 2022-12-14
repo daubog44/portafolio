@@ -8,7 +8,6 @@ const NextSvg = function () {
       viewBox="0 0 888 442.24956"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <title>next_js</title>
       <circle cx="190.00923" cy="79.90411" r="5.54965" fill="#e6e6e6" />
       <circle cx="218.10149" cy="79.90411" r="5.54965" fill="#e6e6e6" />
       <circle cx="246.19376" cy="79.90411" r="5.54965" fill="#e6e6e6" />
