@@ -17,7 +17,7 @@ const Section3 = function () {
   return (
     <>
       <section className="w-screen h-[25vh] relative flex flex-col justify-start items-center bg-indigo-500">
-        <Link href="mailto:abc@example.com">
+        <Link href="mailto:darius.bogdanadrian@gmail.com">
           <TitleAnimated title="Contact me" />
         </Link>
         <a
