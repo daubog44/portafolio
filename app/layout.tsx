@@ -10,8 +10,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
+    <html
+      lang="en"
+      className={`${inter.className} overflow-x-hidden max-w-[100vw]`}
+    >
+      <body className="overflow-x-hidden max-w-full">
         {children}
         <AnalyticsWrapper />
       </body>
