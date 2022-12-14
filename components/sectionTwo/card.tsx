@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import type { IconType } from "react-icons";
 import { motion } from "framer-motion";
-import VerticalBar from "./vertical-bar";
+import VerticalBar from "../vertical-bar";
 
 export interface CardProp {
   background: string;
