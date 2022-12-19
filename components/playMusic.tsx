@@ -5,6 +5,7 @@ const Sound = () => {
   const [IsPlaying, setIsPlaying] = useState(false);
   const [audio, _] = useState(new Audio("/sound/long-day.mp3"));
   const [canPlay, setCanPlay] = useState(false);
+
   useEffect(() => {
     const canPlay = audio.canPlayType("audio/mp3");
     if (canPlay === "maybe" || canPlay === "probably") {

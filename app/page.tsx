@@ -1,8 +1,8 @@
 "use client";
 import "client-only";
-import Section1 from "components/sectionOne/section-1";
-import Section2 from "components/sectionTwo/section-2";
-import Section3 from "components/sectionThree/section-3";
+import Section1 from "@/components/presentetionSection/section-1";
+import Section2 from "@/components/MySkillsSection/section-2";
+import Section3 from "@/components/ContactSection/section-3";
 import Cursor from "components/customCursor";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";

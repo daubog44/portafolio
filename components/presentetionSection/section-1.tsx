@@ -43,7 +43,7 @@ const Section1: FC<{ children: any; onAnimationEnd: () => void }> = function ({
                 </div>
               </div>
               <div className="text-indigo-500 text-xl tracking-wider">
-                I am Darius Bogdan, i am currently in high school. the world of
+                I am Darius Bogdan, i am currently in high school. The world of
                 code has always fascinated me. I started learning it since I was
                 16 and I don't think I'll stop soon.
               </div>

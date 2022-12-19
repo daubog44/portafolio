@@ -1,4 +1,4 @@
-import TitleAnimated from "../sectionTwo/title";
+import TitleAnimated from "../MySkillsSection/title";
 import githubMascot from "../../public/images/githubMascot.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,7 @@ const Section3 = function () {
         <Link href="mailto:darius.bogdanadrian@gmail.com">
           <TitleAnimated title="Contact me" />
         </Link>
-        <a
+        <Link
           ref={imageRef}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
@@ -28,7 +28,7 @@ const Section3 = function () {
           className="absolute -left-14 bottom-0 rotate-[16deg] transition"
         >
           <Image src={githubMascot} alt="Github" width={150} height={150} />
-        </a>
+        </Link>
       </section>
     </>
   );

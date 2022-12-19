@@ -25,7 +25,7 @@ const CardData: CardProp[] = [
   },
   {
     background: "bg-white",
-    description: "Typescript help developer with type checking.",
+    description: "Typescript helps developer with type checking.",
     link: "https://www.typescriptlang.org/",
     linkString: "Programming language",
     Technology: SiTypescript,
@@ -35,7 +35,7 @@ const CardData: CardProp[] = [
   },
   {
     background: "bg-white",
-    description: "Nextjs is the best react framework! this site uses it.",
+    description: "Nextjs is the best react framework! This site uses it.",
     link: "https://nextjs.org/",
     linkString: "Full stack framework",
     Technology: TbBrandNextjs,
@@ -55,7 +55,7 @@ const CardData: CardProp[] = [
   {
     background: "bg-[#ADDEC9]",
     description:
-      "I have been using python for personal small projects, I'm going to keep learning it.",
+      "I have been using python for personal small projects, i'm going to keep learning it.",
     link: "https://www.python.org/",
     linkString: "Programming language",
     Technology: SiPython,
