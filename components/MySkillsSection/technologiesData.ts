@@ -55,7 +55,7 @@ const CardData: CardProp[] = [
   {
     background: "bg-[#ADDEC9]",
     description:
-      "I have been using python for personal small projects, i'm going to keep learning it.",
+      "I have been using python for personal small projects, I'm going to keep learning it.",
     link: "https://www.python.org/",
     linkString: "Programming language",
     Technology: SiPython,
