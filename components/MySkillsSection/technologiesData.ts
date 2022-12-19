@@ -45,7 +45,7 @@ const CardData: CardProp[] = [
   {
     background: "bg-white",
     description:
-      "I currently learn rust for webasm and tauri framework. I love rust!",
+      "I am currently learning rust for webasm and tauri framework. I love rust!",
     link: "https://www.rust-lang.org/it",
     linkString: "Programming language",
     Technology: FaRust,
