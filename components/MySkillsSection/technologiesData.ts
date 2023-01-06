@@ -20,8 +20,7 @@ const CardData: CardProp[] = [
     link: "https://it.wikipedia.org/wiki/JavaScript",
     linkString: "Programming language",
     Technology: DiJavascript1,
-    confidenceColor: "#F7E018",
-    fillNumberConfidence: 6,
+    percentuale: "50%",
   },
   {
     background: "bg-white",
@@ -30,8 +29,7 @@ const CardData: CardProp[] = [
     linkString: "Programming language",
     Technology: SiTypescript,
     fillIcon: "#007ACD",
-    confidenceColor: "#007ACD",
-    fillNumberConfidence: 6,
+    percentuale: "100%",
   },
   {
     background: "bg-white",
@@ -40,7 +38,7 @@ const CardData: CardProp[] = [
     linkString: "Full stack framework",
     Technology: TbBrandNextjs,
     fillIcon: "white",
-    fillNumberConfidence: 5,
+    percentuale: "83.33333%",
   },
   {
     background: "bg-white",
@@ -50,7 +48,7 @@ const CardData: CardProp[] = [
     linkString: "Programming language",
     Technology: FaRust,
     typeOfAnimation: "from-left",
-    fillNumberConfidence: 2,
+    percentuale: "33.333%",
   },
   {
     background: "bg-[#ADDEC9]",
@@ -60,8 +58,7 @@ const CardData: CardProp[] = [
     linkString: "Programming language",
     Technology: SiPython,
     typeOfAnimation: "from-left",
-    confidenceColor: "#ADDEC9",
-    fillNumberConfidence: 3,
+    percentuale: "50%",
   },
   {
     background: "bg-[#00ED64]",
@@ -71,8 +68,7 @@ const CardData: CardProp[] = [
     linkString: "Database technology",
     Technology: SiMongodb,
     typeOfAnimation: "from-left",
-    confidenceColor: "#00ED64",
-    fillNumberConfidence: 6,
+    percentuale: "99.9999%",
   },
   {
     background: "bg-white",
@@ -83,8 +79,7 @@ const CardData: CardProp[] = [
     Technology: GrGraphQl,
     fillIcon: "#E535AB",
     typeOfAnimation: "from-right",
-    confidenceColor: "#E535AB",
-    fillNumberConfidence: 5,
+    percentuale: "83.3333333%",
   },
   {
     background: "bg-[#8BC500]",
@@ -93,21 +88,19 @@ const CardData: CardProp[] = [
     linkString: "Back-end technology",
     Technology: DiNodejs,
     typeOfAnimation: "from-right",
-    confidenceColor: "#8BC500",
-    fillNumberConfidence: 6,
+    percentuale: "99.9999999999%",
   },
-  {
-    background: "bg-white",
-    description:
-      "Is the best front-end framework. I have intention to learn React Native that is used on mobile applications!",
-    link: "https://en.reactjs.org/",
-    linkString: "Front-end framework",
-    Technology: DiReact,
-    fillIcon: "#61DBFB",
-    typeOfAnimation: "from-right",
-    confidenceColor: "#61DBFB",
-    fillNumberConfidence: 6,
-  },
+  // {
+  //   background: "bg-white",
+  //   description:
+  //     "Is the best front-end framework. I have intention to learn React Native that is used on mobile applications!",
+  //   link: "https://en.reactjs.org/",
+  //   linkString: "Front-end framework",
+  //   Technology: DiReact,
+  //   fillIcon: "#61DBFB",
+  //   typeOfAnimation: "from-right",
+  //   percentuale: "99.999999999999999%",
+  // },
   //{
   //  background: "bg-white",
   //  description:
@@ -116,8 +109,7 @@ const CardData: CardProp[] = [
   //  linkString: "Testing Framework",
   //  fillIcon: "#C23E16",
   //  Technology: SiJest,
-  //  confidenceColor: "#C23E16",
-  //  fillNumberConfidence: 5,
+  //  percentuale: 5,
   //},
   //{
   //  background: "bg-[#162332]",
@@ -127,7 +119,7 @@ const CardData: CardProp[] = [
   //  linkString: "e2e Testing Framework",
   //  Technology: SiCypress,
   //  fillIcon: "white",
-  //  fillNumberConfidence: 4,
+  //  percentuale: 4,
   //},
   //{
   //  background: "bg-white",
@@ -137,8 +129,7 @@ const CardData: CardProp[] = [
   //  linkString: "A Utility-first CSS Framework",
   //  Technology: SiTailwindcss,
   //  fillIcon: "#38BDF8",
-  //  confidenceColor: "#38BDF8",
-  //  fillNumberConfidence: 6,
+  //  percentuale: 6,
   //},
   //{
   //  background: "bg-[#0C344B]",
@@ -149,7 +140,7 @@ const CardData: CardProp[] = [
   //  Technology: SiPrisma,
   //  fillIcon: "white",
   //  typeOfAnimation: "from-left",
-  //  fillNumberConfidence: 5,
+  //  percentuale: 5,
   //},
   //{
   //  background: "bg-white",
@@ -160,8 +151,7 @@ const CardData: CardProp[] = [
   //  Technology: SiRedux,
   //  fillIcon: "#7749BD",
   //  typeOfAnimation: "from-left",
-  //  confidenceColor: "#7749BD",
-  //  fillNumberConfidence: 5,
+  //  percentuale: 5,
   //},
   //{
   //  background: "bg-[#476E7A]",
@@ -172,8 +162,7 @@ const CardData: CardProp[] = [
   //  Technology: FaJava,
   //  fillIcon: "white",
   //  typeOfAnimation: "from-left",
-  //  confidenceColor: "#476E7A",
-  //  fillNumberConfidence: 2,
+  //  percentuale: 2,
   //},
 ];
 

@@ -1,8 +1,9 @@
 "use client";
 import "client-only";
 import Section1 from "@/components/presentetionSection/section-1";
-import Section2 from "@/components/MySkillsSection/section-2";
+import Section2 from "@/components/MySkillsSection/skillSection";
 import Section3 from "@/components/ContactSection/section-3";
+import LoadLinks from "@/components/loadLinks";
 import Cursor from "components/customCursor";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
@@ -10,6 +11,8 @@ import Sound from "components/playMusic";
 import "../styles/loading-animation.css";
 
 const Home = () => {
+  const links = ["https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"];
+
   const matches = useMediaQuery("(min-width: 1200px)");
   const [animateComplete, setAnimateComplete] = useState(false);
   const [cursorType, setCursorType] = useState<"primary" | "secondary">(
@@ -36,6 +39,7 @@ const Home = () => {
   if (isClientReady)
     return (
       <>
+        <LoadLinks links={links} />
         <div className="App">
           {matches && <Cursor color={cursorType} />}
           <Section1

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { FC, memo } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "../../styles/section-1-waves.css";
-import WaveSVG from "../../public/svg/WaveSVG";
-import HomeSVG from "../../public/svg/HomeSVG";
+import WaveSVG from "../svg_components/WaveSVG";
+import HomeSVG from "../svg_components/HomeSVG";
 import { useMediaQuery } from "usehooks-ts";
 import FireFliesEffect from "../fireflies";
 

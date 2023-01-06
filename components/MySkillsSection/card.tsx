@@ -2,7 +2,14 @@ import { FC } from "react";
 import Link from "next/link";
 import type { IconType } from "react-icons";
 import { motion } from "framer-motion";
-import VerticalBar from "../vertical-bar";
+import VerticalBar from "./vertical-bar";
+import VerticalBarSVG from "../svg_components/VerticalBarSVG";
+import VerticalSVG1 from "./svgs/VerticalSVG1";
+import VerticalSVG2 from "./svgs/VerticalSVG2";
+import VerticalSVG3 from "./svgs/VerticalSVG3";
+import VerticalSVG4 from "./svgs/VerticalSVG4";
+import VerticalSVG5 from "./svgs/VerticalSVG5";
+import VerticalSVG6 from "./svgs/VerticalSVG6";
 
 export interface CardProp {
   background: string;
@@ -12,11 +19,10 @@ export interface CardProp {
   linkString: string;
   fillIcon?: string | "none";
   typeOfAnimation?: "from-bottom" | "from-left" | "from-right";
-  confidenceColor?: string;
-  fillNumberConfidence: number;
+  percentuale: string;
 }
 
-const Card: FC<CardProp> = function ({
+const Card: FC<CardProp & { index: number }> = function ({
   background,
   Technology,
   link,
@@ -24,9 +30,30 @@ const Card: FC<CardProp> = function ({
   description,
   fillIcon = "black",
   typeOfAnimation = "from-bottom",
-  confidenceColor = "#FFFF",
-  fillNumberConfidence,
+  index,
+  percentuale,
 }) {
+
+  const svgCalc = (idx: string) => {
+    switch (idx) {
+      case "0":
+        return <VerticalSVG1 index={idx} />
+      case "1":
+        return <VerticalSVG2 index={idx} />
+      case "2":
+        return <VerticalSVG3 index={idx} />
+      case "3":
+        return <VerticalSVG4 index={idx} />
+      case "4":
+        return <VerticalSVG5 index={idx} />
+      case "5":
+        return <VerticalSVG6 index={idx} />
+      default:
+        return <div>Error</div>
+    }
+  }
+
+
   if (typeof link !== "string") return <h1>error</h1>;
   return (
     <motion.div
@@ -70,8 +97,10 @@ const Card: FC<CardProp> = function ({
               {description}
             </p>
           </div>
-          <div className="p-4 md:flex md:flex-col hidden h-44">
-            <VerticalBar color={confidenceColor} fill={fillNumberConfidence} />
+          <div className="pr-4 md:flex md:flex-col h-44">
+            {
+              svgCalc(String(index))
+            }
           </div>
         </div>
 

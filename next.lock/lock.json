@@ -1,0 +1,9 @@
+{
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js": { "integrity": "sha512-6MCPs9fbSIt6mTpJH2Lbo9Kk71gcgwY85BCqJGP04x+O08W3m/OiKfMiMc4VQKYn+DCtAQwpGumWeD0cACeRsQ==", "contentType": "application/javascript; charset=utf-8" },
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/utils/Draggable.min.js": { "integrity": "sha512-qSMkmJNNoHwFdzaT+LgrH+gegU2D8sgBQTp4o8flIpmyyLB33GVnFCt2d+F9uNxWXoUZFNSwkH6SImVWPp3AJA==", "contentType": "application/javascript; charset=utf-8" },
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12": { "integrity": "sha512-hUTW0xapj4FVk3JkM+vw6Np4d8s3fp3bcfnv99WSFk30KGt/d3x0JIWeHyJQgUobjIo6XN2v2FVqfrQmfwhwMg==", "contentType": "text/javascript" },
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ModifiersPlugin-latest-beta.js": { "integrity": "sha512-ad7mn7PBOzpnLus76n7ppuvEl9vhK2yNqH4uva0r1toELq8U+XDryM+hGnOc5GqUhA7JPnAz8q1Tze85UmbBLQ==", "contentType": "text/javascript" },
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js": { "integrity": "sha512-bOyijZK+6nETF03W9YtUyxmJ1Nf3s0mB/x+Znl1+Nur/pkNZYabSzHRYNbQugLgl3mc5fwyOj6xsYYb56afrHQ==", "contentType": "application/javascript" },
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js": { "integrity": "sha512-Q77InaFQFiQM7Wevvw0v4sGi9X8FAkmFuPZB5uxvXQSq5HsSAIbxDZAZgDUxw/g4WVID6bF43+1T1L0cRhUHLA==", "contentType": "application/javascript" },
+  "version": 1
+}
