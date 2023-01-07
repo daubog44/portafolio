@@ -1,4 +1,4 @@
-import { addOne } from "@c/omponents/MySkillsSection/technologiesData";
+import { addOne } from "@/components/MySkillsSection/technologiesData";
 import { useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import useStore from "../store";

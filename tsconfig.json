@@ -16,7 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@c/omponents/*": ["components/*"],
+      "@/components/*": ["components/*"],
       "app/*": ["app/*"]
     },
     "plugins": [
