@@ -1,8 +1,8 @@
 "use client";
 import { FC, useEffect } from "react";
 import TitleAnimated from "./Title";
-import Card from "./Card";
 import { CardProp } from './technologiesData';
+import Card from "./card";
 
 const SkillSection: FC<{
   handleHover?: {
