@@ -1,31 +1,26 @@
 import { FC, } from "react";
 
 const VerticalBarSVG: FC<{ index: string, percentuale: string }> = function ({ index, percentuale }) {
-    console.log("sdfsdf", percentuale);
-    let value = Number(percentuale.split("%").at(-2));
-    value = -((value / 100) * 380) * 1.12;
-    let valueCalc = value.toFixed(0);
-    console.log("a", valueCalc, typeof valueCalc);
-    return <svg className="h-full" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="200 0 400 600">
+    return <svg className="h-full" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="350 0 120 600">
         <defs>
-            <linearGradient id="liquidGrad" x1="557" y1="150" x2="557" y2="546" gradientUnits="userSpaceOnUse">
+            <linearGradient id={`liquidGrad${index}`} x1="557" y1="150" x2="557" y2="546" gradientUnits="userSpaceOnUse">
                 <stop offset="0" stopColor="#FF0909" />
                 <stop offset="0.2" stopColor="#F3481A" />
                 <stop offset="0.5" stopColor="#FABA2C" />
                 <stop offset="1" stopColor="#00BCF2" />
             </linearGradient>
-            <rect id="tube" x="357" y="150" width="86" height="400" rx="43" ry="43" />
-            <clipPath id="liquidMask">
-                <use xlinkHref="#tube" className="liquidMask" />
+            <rect id={`tube${index}`} x="357" y="150" width="86" height="400" rx="43" ry="43" />
+            <clipPath id={`liquidMask${index}`}>
+                <use xlinkHref={`#tube${index}`} className="liquidMask" />
             </clipPath>
-            <clipPath id="tubeMask">
-                <use xlinkHref="#tube" className="liquidMask" />
+            <clipPath id={`tubeMask${index}`}>
+                <use xlinkHref={`#tube${index}`} className="liquidMask" />
             </clipPath>
-            <path id="liquid" d="M757,552v490H357V552c50,0,50,20,100,20s50-20,100-20,50,20,100,20S707,552,757,552Z" />
-            <mask id="gradMask">
+            <path id={`liquid${index}`} d="M757,552v490H357V552c50,0,50,20,100,20s50-20,100-20,50,20,100,20S707,552,757,552Z" />
+            <mask id={`gradMask${index}`}>
 
-                <use xlinkHref="#liquid" className={"li" + index} x="0" y={valueCalc} fill="#FCEFD6" />
-                <use xlinkHref="#liquid" className={"li" + index} x="0" y={valueCalc} fill="#EEE" opacity="0.7" />
+                <use xlinkHref={`#liquid${index}`} className={"li" + index} x="0" y={percentuale} fill="#FCEFD6" />
+                <use xlinkHref={`#liquid${index}`} className={"li" + index} x="0" y={percentuale} fill="#EEE" opacity="0.7" />
 
             </mask>
         </defs>
@@ -33,10 +28,11 @@ const VerticalBarSVG: FC<{ index: string, percentuale: string }> = function ({ i
 
         <g className="whole" transform="translate(0, -40)">
 
-            <use xlinkHref="#tube" className="tubeBg" fill="#C8D9D3" opacity="0.61" />
 
-            <g mask="url(#gradMask)">
-                <use xlinkHref="#tube" fill="url(#liquidGrad)" />
+            <use xlinkHref={`#tube${index}`} className="tubeBg" fill="#C8D9D3" opacity="0.61" />
+
+            <g mask={`url(#gradMask${index})`}>
+                <use xlinkHref={`#tube${index}`} fill={`url(#liquidGrad${index})`} />
             </g>
             <line className="tubeShine" x1="371" y1="200" x2="371" y2="443" fill="none" stroke="#FFF" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="8" opacity="0.21" strokeDasharray="153 30" strokeDashoffset="-20" />
 

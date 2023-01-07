@@ -1,18 +1,17 @@
 "use client";
-import { FC, useEffect, useState } from "react";
-import Card from "./card";
-import TitleAnimated from "./title";
-import CardData from "./technologiesData";
-import { v4 as uuidv4 } from 'uuid';
-import Script from "next/script";
-import useStore from '../../store/store';
+import { FC, useEffect } from "react";
+import TitleAnimated from "./Title";
+import Card from "./Card";
+import { CardProp } from './technologiesData';
 
 const SkillSection: FC<{
   handleHover?: {
     whileBottomDivHover: () => void;
     whileBottomDivLeaveHover: () => void;
-  };
-}> = function ({ handleHover }) {
+  },
+  cardData: CardProp[],
+}> = function ({ handleHover, cardData }) {
+  console.log(cardData.length);
 
   useEffect(() => {
     const cards = document.getElementById("cards") as HTMLElement;
@@ -40,7 +39,7 @@ const SkillSection: FC<{
           className="mx-14 grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-2 grid-rows-2 gap-6 relative -top-4 auto-rows-fr"
           id="cards"
         >
-          {CardData.map((el, i) => (
+          {cardData.map((el, i) => (
             <Card {...el} key={i} index={i} />
           ))}
         </div>

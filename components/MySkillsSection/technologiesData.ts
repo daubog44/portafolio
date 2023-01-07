@@ -1,8 +1,6 @@
-import { CardProp } from "./card";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
   FaRust,
-  // SiJest,
   // SiCypress,
   // SiTailwindcss,
   // SiPrisma,
@@ -10,17 +8,39 @@ import {
   // FaJava,
 } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
-import { SiPython, SiMongodb, SiTypescript } from "react-icons/si";
-import { DiJavascript1, DiNodejs, DiReact } from "react-icons/di";
+import {
+  SiMongodb,
+  SiTypescript,
+  SiExpress,
+  SiGoland,
+  SiJest,
+  SiPrisma,
+  SiHellofresh,
+} from "react-icons/si";
+import { type IconType } from "react-icons";
+
+export interface CardProp {
+  background: string;
+  Technology: IconType;
+  description: string;
+  link: string;
+  linkString: string;
+  fillIcon?: string | "none";
+  typeOfAnimation?: "from-bottom" | "from-left" | "from-right";
+  percentuale: string;
+}
 
 const CardData: CardProp[] = [
   {
-    background: "bg-[#F7E018]",
-    description: "Javascript is the most popular programming lenguage.",
-    link: "https://it.wikipedia.org/wiki/JavaScript",
-    linkString: "Programming language",
-    Technology: DiJavascript1,
-    percentuale: "50%",
+    background: "bg-[#0C344B]",
+    description:
+      "Is the most popular and best ORM for SQL databases, personally i use it a lot with PostgreSQL.",
+    link: "https://www.prisma.io/",
+    linkString: "ORM",
+    Technology: SiPrisma,
+    fillIcon: "white",
+    typeOfAnimation: "from-left",
+    percentuale: "75%",
   },
   {
     background: "bg-white",
@@ -29,46 +49,57 @@ const CardData: CardProp[] = [
     linkString: "Programming language",
     Technology: SiTypescript,
     fillIcon: "#007ACD",
-    percentuale: "100%",
+    percentuale: "80%",
   },
   {
     background: "bg-white",
-    description: "Nextjs is the best react framework! This site uses it.",
+    description: "Nextjs is the best react meta framework! This site uses it.",
     link: "https://nextjs.org/",
     linkString: "Full stack framework",
     Technology: TbBrandNextjs,
     fillIcon: "white",
-    percentuale: "83.33333%",
+    percentuale: "90%",
   },
   {
     background: "bg-white",
     description:
-      "I am currently learning rust for webasm and tauri framework. I love rust!",
-    link: "https://www.rust-lang.org/it",
+      "I'm learning golang lenguage for make microservices backands with the help of technologies such as gRPC and rabbitMQ.",
+    link: "https://go.dev/",
     linkString: "Programming language",
-    Technology: FaRust,
+    Technology: SiGoland,
     typeOfAnimation: "from-left",
-    percentuale: "33.333%",
-  },
-  {
-    background: "bg-[#ADDEC9]",
-    description:
-      "I have been using python for personal small projects, I'm going to keep learning it.",
-    link: "https://www.python.org/",
-    linkString: "Programming language",
-    Technology: SiPython,
-    typeOfAnimation: "from-left",
+    fillIcon: "#00AED8",
     percentuale: "50%",
   },
   {
+    background: "bg-white",
+    description:
+      "Jest is used for integration-test and unit-test on both in the front-end and in the back-end.",
+    link: "https://jestjs.io/",
+    linkString: "Testing Framework",
+    fillIcon: "#C23E16",
+    Technology: SiJest,
+    percentuale: "75%",
+  },
+  // {
+  //   background: "bg-[#ADDEC9]",
+  //   description:
+  //     "I have been using python for personal small projects, I'm going to keep learning it.",
+  //   link: "https://www.python.org/",
+  //   linkString: "Programming language",
+  //   Technology: SiPython,
+  //   typeOfAnimation: "from-left",
+  //   percentuale: "65%",
+  // },
+  {
     background: "bg-[#00ED64]",
     description:
-      "MongoDB is a popular NoSql databse that i used when i was learning MERN Stack with mongoose library.",
+      "MongoDB is a popular NoSql databse that i used when i was learning MERN Stack.",
     link: "https://www.mongodb.com/",
     linkString: "Database technology",
     Technology: SiMongodb,
     typeOfAnimation: "from-left",
-    percentuale: "99.9999%",
+    percentuale: "80%",
   },
   {
     background: "bg-white",
@@ -79,38 +110,18 @@ const CardData: CardProp[] = [
     Technology: GrGraphQl,
     fillIcon: "#E535AB",
     typeOfAnimation: "from-right",
-    percentuale: "83.3333333%",
+    percentuale: "85%",
   },
   {
-    background: "bg-[#8BC500]",
-    description: "NodeJs is the major js runtime for build incredible APIs.",
-    link: "https://nodejs.org/en/",
+    background: "bg-white",
+    description:
+      "express is one of the most used framework for build REST APIs with nodejs.",
+    link: "https://expressjs.com/",
     linkString: "Back-end technology",
-    Technology: DiNodejs,
+    Technology: SiExpress,
     typeOfAnimation: "from-right",
-    percentuale: "99.9999999999%",
+    percentuale: "100%",
   },
-  // {
-  //   background: "bg-white",
-  //   description:
-  //     "Is the best front-end framework. I have intention to learn React Native that is used on mobile applications!",
-  //   link: "https://en.reactjs.org/",
-  //   linkString: "Front-end framework",
-  //   Technology: DiReact,
-  //   fillIcon: "#61DBFB",
-  //   typeOfAnimation: "from-right",
-  //   percentuale: "99.999999999999999%",
-  // },
-  //{
-  //  background: "bg-white",
-  //  description:
-  //    "Jest is used for integration-test and unit-test on both in the front-end and in the back-end.",
-  //  link: "https://jestjs.io/",
-  //  linkString: "Testing Framework",
-  //  fillIcon: "#C23E16",
-  //  Technology: SiJest,
-  //  percentuale: 5,
-  //},
   //{
   //  background: "bg-[#162332]",
   //  description:
@@ -132,17 +143,6 @@ const CardData: CardProp[] = [
   //  percentuale: 6,
   //},
   //{
-  //  background: "bg-[#0C344B]",
-  //  description:
-  //    "Is the most popular and best ORM for databases, personally i use it a lot with PostgreSQL.",
-  //  link: "https://www.prisma.io/",
-  //  linkString: "Next-generation of ORM",
-  //  Technology: SiPrisma,
-  //  fillIcon: "white",
-  //  typeOfAnimation: "from-left",
-  //  percentuale: 5,
-  //},
-  //{
   //  background: "bg-white",
   //  description:
   //    "Redux is the most popular library for state menagment for react! I use it with redux-toolkit and //rtk-query.",
@@ -153,17 +153,16 @@ const CardData: CardProp[] = [
   //  typeOfAnimation: "from-left",
   //  percentuale: 5,
   //},
-  //{
-  //  background: "bg-[#476E7A]",
-  //  description:
-  //    "I currently learn java in my high school with algorithm exercises.",
-  //  link: "https://www.java.com/en/",
-  //  linkString: "Programming Lenguage",
-  //  Technology: FaJava,
-  //  fillIcon: "white",
-  //  typeOfAnimation: "from-left",
-  //  percentuale: 2,
-  //},
 ];
+
+export const addOne: CardProp = {
+  background: "bg-[#F7E018]",
+  description:
+    "Fresh is part of a new kind of frameworks built with the Deno, it abuses ssr for blazing fast responses.",
+  link: "https://fresh.deno.dev/",
+  linkString: "Full stack framework",
+  Technology: SiHellofresh,
+  percentuale: "50%",
+};
 
 export default CardData;

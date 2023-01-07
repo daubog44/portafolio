@@ -6,7 +6,7 @@ import "../../styles/section-1-waves.css";
 import WaveSVG from "../svg_components/WaveSVG";
 import HomeSVG from "../svg_components/HomeSVG";
 import { useMediaQuery } from "usehooks-ts";
-import FireFliesEffect from "../fireflies";
+import FireFliesEffect from "../Fireflies";
 
 const Section1: FC<{ children: any; onAnimationEnd: () => void }> = function ({
   onAnimationEnd,

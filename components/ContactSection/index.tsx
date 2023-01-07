@@ -1,10 +1,10 @@
-import TitleAnimated from "../MySkillsSection/title";
 import githubMascot from "../../public/images/githubMascot.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useRef } from "react";
+import TitleAnimated from "../MySkillsSection/Title";
 
-const Section3 = function () {
+const ContactSection = function () {
   const imageRef = useRef<null | any>(null);
   const onMouseEnter = useCallback(() => {
     if (imageRef.current) imageRef.current.style.transform = "rotate(35deg)";
@@ -34,4 +34,4 @@ const Section3 = function () {
   );
 };
 
-export default Section3;
+export default ContactSection;

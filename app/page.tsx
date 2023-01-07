@@ -1,24 +1,26 @@
 "use client";
 import "client-only";
-import Section1 from "@/components/presentetionSection/section-1";
-import Section2 from "@/components/MySkillsSection/skillSection";
-import Section3 from "@/components/ContactSection/section-3";
-import LoadLinks from "@/components/loadLinks";
-import Cursor from "components/customCursor";
+import PresentationSection from "@components/presentetionSection";
+import SkillSection from "@components/MySkillsSection";
+import ContactSection from "@components/ContactSection";
+import LoadLinks from "@components/LoadLinks";
+import Cursor from "@components/CustomCursor";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
-import Sound from "components/playMusic";
 import "../styles/loading-animation.css";
+import Sound from "@components/PlayMusic";
+import useCardData from "hooks/useCardData";
 
 const Home = () => {
-  const links = ["https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"];
+  const links = ["https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/utils/Draggable.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ModifiersPlugin-latest-beta.js"];
 
-  const matches = useMediaQuery("(min-width: 1200px)");
+  const matches = useMediaQuery("(min-width: 1024px)");
   const [animateComplete, setAnimateComplete] = useState(false);
   const [cursorType, setCursorType] = useState<"primary" | "secondary">(
     "primary"
   );
   const [isClientReady, setIsClientReady] = useState(false);
+  const cardData = useCardData();
 
   useEffect(() => {
     if (window) setIsClientReady(true);
@@ -42,16 +44,17 @@ const Home = () => {
         <LoadLinks links={links} />
         <div className="App">
           {matches && <Cursor color={cursorType} />}
-          <Section1
+          <PresentationSection
             onAnimationEnd={() => {
               setAnimateComplete(true);
             }}
           >
             <Sound />
-          </Section1>
+          </PresentationSection>
           {animateComplete ? (
             <>
-              <Section2
+              <SkillSection
+                cardData={cardData}
                 handleHover={{
                   whileBottomDivHover: () => {
                     setCursorType("secondary");
@@ -61,7 +64,7 @@ const Home = () => {
                   },
                 }}
               />
-              <Section3 />
+              <ContactSection />
             </>
           ) : null}
         </div>

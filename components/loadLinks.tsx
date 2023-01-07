@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import Script from "next/script";
-import useStore from '../store/store';
+import useStore from '../store';
 import { FC, useState } from 'react';
 
 
