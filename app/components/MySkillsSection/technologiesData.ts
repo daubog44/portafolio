@@ -39,7 +39,6 @@ const CardData: CardProp[] = [
     linkString: "ORM",
     Technology: SiPrisma,
     fillIcon: "white",
-    typeOfAnimation: "from-left",
     percentuale: "75%",
   },
   {
