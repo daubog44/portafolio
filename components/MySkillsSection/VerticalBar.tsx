@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import useStore from "../../store";
 import js from "../../scripts/vertical-bar-animation.js"
-import VerticalBarSVG from "@components/svg_components/VerticalBarSVG";
+import VerticalBarSVG from "@c/omponents/svg_components/VerticalBarSVG";
 
 const VerticalBar: FC<{ percentaule: string, index: number }> = function ({
   percentaule,

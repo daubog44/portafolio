@@ -161,6 +161,7 @@ export const addOne: CardProp = {
     "Fresh is part of a new kind of frameworks built with the Deno, it abuses ssr for blazing fast responses.",
   link: "https://fresh.deno.dev/",
   linkString: "Full stack framework",
+  typeOfAnimation: "from-right",
   Technology: SiHellofresh,
   percentuale: "50%",
 };
