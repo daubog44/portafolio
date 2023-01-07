@@ -9,7 +9,7 @@ import { useMediaQuery } from "usehooks-ts";
 import "../styles/loading-animation.css";
 import Sound from "@components/PlayMusic";
 import useCardData from "hooks/useCardData";
-import LoadLinks from "@components/loadLinks";
+import LoadLinks from "@components/LoadLinks";
 
 const Home = () => {
   const links = ["https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js", "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/utils/Draggable.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ModifiersPlugin-latest-beta.js"];

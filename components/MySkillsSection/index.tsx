@@ -2,7 +2,7 @@
 import { FC, useEffect } from "react";
 import TitleAnimated from "./Title";
 import { CardProp } from './technologiesData';
-import Card from "./card";
+import Card from "./Card";
 
 const SkillSection: FC<{
   handleHover?: {
