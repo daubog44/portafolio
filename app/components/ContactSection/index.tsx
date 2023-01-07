@@ -1,4 +1,4 @@
-import githubMascot from "../../public/images/githubMascot.png";
+import githubMascot from "../../../public/images/githubMascot.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useRef } from "react";
