@@ -78,6 +78,7 @@ const CardData: CardProp[] = [
     link: "https://jestjs.io/",
     linkString: "Testing Framework",
     fillIcon: "#C23E16",
+    typeOfAnimation: "from-left",
     Technology: SiJest,
     percentuale: "75%",
   },
