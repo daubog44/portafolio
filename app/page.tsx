@@ -43,7 +43,7 @@ const Home = () => {
       <>
         <LoadLinks links={links} />
         <div className="App">
-          {matches && <Cursor color={cursorType} />}
+          {matches && <Cursor />}
           <PresentationSection
             onAnimationEnd={() => {
               setAnimateComplete(true);

@@ -11,7 +11,6 @@ const SkillSection: FC<{
   },
   cardData: CardProp[],
 }> = function ({ handleHover, cardData }) {
-  console.log(cardData.length);
 
   useEffect(() => {
     const cards = document.getElementById("cards") as HTMLElement;

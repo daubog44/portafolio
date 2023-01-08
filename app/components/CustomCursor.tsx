@@ -3,13 +3,13 @@
 import { FC } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
-const Cursor: FC<{ color: "primary" | "secondary" }> = ({ color }) => {
+const Cursor: FC<> = () => {
   return (
     <>
       <AnimatedCursor
         innerSize={8}
         outerSize={24}
-        color={color === "primary" ? "255, 255, 255" : "193, 11, 111"}
+        color={"112, 26, 117"}
         outerAlpha={0.2}
         hasBlendMode={true}
         innerScale={0.7}
